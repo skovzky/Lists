@@ -4,3 +4,9 @@
 ;ROBERT HEEMANN (THE GREAT VLADIMIR SKOVZKY)
 
 ;EX 117
+
+(define list-of-amounts
+  ...)
+
+(define (sum loa)
+  0)
