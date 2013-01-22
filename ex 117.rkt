@@ -5,8 +5,14 @@
 
 ;EX 117
 
+;create the list of numbers
 (define list-of-amounts
-  ...)
+  (cons 1 (cons 2 (cons 3 empty))))
+
+
+;check expect
+(check-expect (sum (cons 1 empty)) 1)
+(check-expect (sum (cons 2 (cons 2 empty))) 4)
 
 (define (sum loa)
   0)
