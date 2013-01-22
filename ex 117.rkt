@@ -15,4 +15,6 @@
 (check-expect (sum (cons 2 (cons 2 empty))) 4)
 
 (define (sum loa)
-  0)
+  (cond
+    [(empty? loa) 0]
+    [(
