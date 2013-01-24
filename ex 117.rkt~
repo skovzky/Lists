@@ -17,5 +17,4 @@
 (define (sum loa)
   (cond
     [(empty? loa) 0]
-    [(cons? loa) (+ (first loa) (sum (rest loa)))]
-    [else "you dont need an else, but if youre reading this, then im obviously wrong"]))
+    [(
