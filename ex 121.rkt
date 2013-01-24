@@ -17,6 +17,6 @@
 (define (ill-sized? loi n)
   (cond
     [(empty? loi) "no images, please insert an image into the list"]
-    [cons?
+    [(cons? loi
      (if
-      (and (= (image-width (first loi) 
+      (and (= (image-width (first loi) n) (image-height (first loi) n)) (ill-sized (rest loi) n))))]))
