@@ -4,6 +4,12 @@
 ;EX 124
 ;robert heemann (THE GREAT VLADIMIR SKOVZKY)
 
+
+;======================================================
+;           hello  world... my small world....
+;======================================================
+
+
 ;Helper functions check-expects
      ;(sum list)
 (check-expect (sum (cons 1 (cons 2 empty))) 3)
@@ -11,25 +17,34 @@
 (check-expect (sum (cons 1 (cons -2 empty))) -1)
 (check-expect (sum (cons -1 (cons 2 empty))) 1)
 
+
      ;(find-amount-in)
 
 
+
+;Function Check-Expects
      ;(average)
 
 
+;======================================================
 ;Helper functions
+     ;(sum)
 (define (sum list)
   (cond
     [(empty? list) 0]
     [(cons? list) ((+ (first list) (rest list)) (sum (rest list)))]))
 
+
+     ;(find-amount-in)
 (define (find-amount-in list)
   (cond
     (...)))
 
+
+;======================================================
 ;average will take the sum of the numbers in a list and divide them all
 (define (average list)
   (cond
     [(empty? list) 0]
     [(cons? list)
-     (/ (sum list) (find-amount-in list))
+     (/ (sum list) (find-amount-in list))]))
