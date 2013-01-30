@@ -18,12 +18,12 @@
 (check-expect (sum (cons -1 (cons 2 empty))) 1)
 
 
-     ;(find-amount-in)
+     ;(how-many)
 
 
 
 ;Function Check-Expects
-     ;(average)
+     ;(divide)
 
 
 ;======================================================
@@ -32,13 +32,14 @@
 (define (sum list)
   (cond
     [(empty? list) 0]
-    [(cons? list) ((+ (first list) (rest list)) (sum (rest list)))]))
+    [else (+ (first list) (sum (rest list)))]))
 
 
-     ;(find-amount-in)
-(define (find-amount-in list)
+     ;(how-many)
+(define (how-many list)
   (cond
-    (...)))
+    [(empty? list) 0]
+    [else (+ (how-many (rest list)) 1)]))
 
 
 ;======================================================
@@ -47,4 +48,4 @@
   (cond
     [(empty? list) 0]
     [(cons? list)
-     (/ (sum list) (find-amount-in list))]))
+     (/ (sum list) (how-many list))]))
